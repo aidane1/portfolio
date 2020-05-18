@@ -339,12 +339,7 @@ animatedElements.forEach((element) => {
       }
     }
   } else {
-    // animate(element);
-    element.style.opacity = "1";
-    let customNum = parseInt(element.getAttribute("data-custom-animation"));
-    if (!isNaN(customNum)) {
-      animate(element);
-    }
+	animate(element);
   }
 });
 
