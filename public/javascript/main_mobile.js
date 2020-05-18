@@ -189,7 +189,7 @@ window.onload = () => {
     });
   }
   itemBoxes.forEach((project) => {
-    grid.appendChild(createProjectBox(project));
+    // grid.appendChild(createProjectBox(project));
   });
 };
 
