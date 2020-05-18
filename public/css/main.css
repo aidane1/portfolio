@@ -833,6 +833,10 @@ body {
   .grid-overlay:hover {
 	  opacity: 0.8;
   }
+
+  .selected-project {
+	  transition: none;
+  }
 }
 
 @media screen and (max-width: 450px) {
