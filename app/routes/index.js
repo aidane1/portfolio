@@ -25,7 +25,7 @@ router.get("/", async (req, res) => {
     console.log(req.device);
 
     if (req.device.type.toLowerCase() == "desktop") {
-      res.render("mobile_index", {
+      res.render("index", {
         server_info,
         moment,
         blogs,
