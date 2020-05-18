@@ -152,7 +152,7 @@ body {
 }
 
 .skill-bar-holder-mobile {
-	transform: translateX(0px);
+  transform: translateX(0px);
 }
 
 .skill-bar {
@@ -325,7 +325,7 @@ body {
 }
 
 .mobile-hex {
-	transform: translateX(-50%) rotateY(0deg);
+  transform: translateX(-50%) rotateY(0deg);
 }
 
 .hex-content {
@@ -806,6 +806,33 @@ body {
     justify-content: flex-start;
     align-items: center;
   }
+
+  .hexagon-boxes {
+    padding: 0px;
+  }
+
+  .data-box {
+    width: calc(2 * 70px / 0.866);
+    margin: 5px 5px;
+  }
+  .hex {
+    height: 70px;
+    width: calc(70px / 1.732);
+  }
+
+  .data-box-title {
+    font-size: 16px;
+  }
+  .data-box-subtitle {
+    font-size: 12px;
+  }
+  .hex-content > i {
+    font-size: 30px;
+  }
+
+  .grid-overlay:hover {
+	  opacity: 0.8;
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -818,7 +845,35 @@ body {
     transition: color 0.3s linear;
     font-size: 14px;
   }
+
+  .frame-title {
+	  font-size: 35px;
+  }
+
+  .skill-bar-skill {
+	  font-size: 10px;
+	  width: 100px;
+  }
   .grid-item {
     width: 100%;
+  }
+
+  .data-box {
+    width: calc(2 * 60px / 0.866);
+    margin: 5px 5px;
+  }
+  .hex {
+    height: 60px;
+    width: calc(60px / 1.732);
+  }
+
+  .data-box-title {
+    font-size: 15px;
+  }
+  .data-box-subtitle {
+    font-size: 11px;
+  }
+  .hex-content > i {
+    font-size: 25px;
   }
 }
