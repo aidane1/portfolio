@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Bitter&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="/css/main.css">
+	<script src="https://kit.fontawesome.com/9afb2fab5c.js" crossorigin="anonymous"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="css3-animate-it-master/js/css3-animate-it.js"></script>
+	<link rel="stylesheet" href="css3-animate-it-master/css/animations.css" type="text/css"> -->
+	<script src="/vanta/vendor/three.r95.min.js"></script>
+
+	<title>Aidan Eglin - Developer</title>
+
+	<style>
+
+	</style>
+</head>
+
+<body>
+	<div class="frame frame-1" id="frame-1">
+		<div class="frame-1-background" id="frame-1-background">
+
+		</div>
+		<div class="main">
+			<div class="title">
+				Hello, I'm <span>Aidan Eglin</span>.
+			</div>
+			<div class="subtitle">
+				I'm a full-stack web developer.
+			</div>
+			<a class="view-my-work" href="#frame-2">View my work <i class="fas fa-arrow-right"></i></a>
+		</div>
+	</div>
+	<div class="frame frame-2" id="frame-2">
+		<nav class="nav-bar" id="nav-bar">
+			<ul>
+				<li><a class="nav-link active" onclick="closeNavBar()" href="#frame-1">Home</a></li>
+				<li><a class="nav-link" onclick="closeNavBar()" href="#frame-2">About</a></li>
+				<li><a class="nav-link" onclick="closeNavBar()" href="#frame-3">Projects</a></li>
+				<% if (blogs.length) { %>
+				<li><a class="nav-link" onclick="closeNavBar()" href="#frame-4">Blog</a></li>
+				<% } %>
+				<li><a class="nav-link" onclick="closeNavBar()" href="#frame-5">Contact</a></li>
+			</ul>
+			<div class="menu-icon" onclick="toggleMenu()">
+				<div class="bar"></div>
+				<div class="bar"></div>
+				<div class="bar"></div>
+			</div>
+		</nav>
+		<div class="animated frame-title" data-direction="X" data-transition-time="0.4s" data-magnitude="-550px"
+			data-base-margin="20px" style="margin-top: 70px">
+			About
+		</div>
+		<div class="animated frame-title-bar" data-animated-override="true" data-animation-delay="400"
+			data-direction="X" data-transition-time="0.4s" data-magnitude="-550px" data-base-margin="80px">
+		</div>
+		<div class="flex-row hexagon-boxes">
+			<div class="data-box">
+				<div class="hex animated" data-base-margin="20px" data-type="custom" data-custom-animation="2">
+					<div class="hex-content">
+						<i class="fas fa-tachometer-alt"></i>
+					</div>
+				</div>
+				<div class="data-box-title animated" data-animation-delay="100" data-direction="X"
+					data-transition-time="0.4s" data-magnitude="0px" data-base-margin="10px">
+					Fast
+				</div>
+				<div class="data-box-subtitle animated" data-animation-delay="300" data-direction="X"
+					data-transition-time="0.4s" data-magnitude="0px" data-base-margin="10px">
+					Fast and lag free loading, my top priority.
+				</div>
+			</div>
+
+			<div class="data-box">
+				<div class="hex animated" data-animation-delay="100" data-base-margin="20px" data-type="custom"
+					data-custom-animation="2">
+					<div class="hex-content">
+						<i class="fas fa-tachometer-alt"></i>
+					</div>
+				</div>
+				<div class="data-box-title animated" data-animation-delay="200" data-direction="X"
+					data-transition-time="0.4s" data-magnitude="0px" data-base-margin="10px">
+					Dynamic
+				</div>
+				<div class="data-box-subtitle animated" data-animation-delay="400" data-direction="X"
+					data-transition-time="0.4s" data-magnitude="0px" data-base-margin="10px">
+					Websites don't have to be static, I love making pages come to life.
+				</div>
+			</div>
+
+
+			<div class="data-box">
+				<div class="hex animated" data-animation-delay="200" data-base-margin="20px" data-type="custom"
+					data-custom-animation="2">
+					<div class="hex-content">
+						<i class="fas fa-tachometer-alt"></i>
+					</div>
+				</div>
+				<div class="data-box-title animated" data-animation-delay="300" data-direction="X"
+					data-transition-time="0.4s" data-magnitude="0px" data-base-margin="10px">
+					Responsive
+				</div>
+				<div class="data-box-subtitle animated" data-animation-delay="500" data-direction="X"
+					data-transition-time="0.4s" data-magnitude="0px" data-base-margin="10px">
+					My layouts will work on any device, big or small.
+				</div>
+			</div>
+
+
+			<div class="data-box">
+				<div class="hex animated" data-animation-delay="300" data-base-margin="20px" data-type="custom"
+					data-custom-animation="2">
+					<div class="hex-content">
+						<i class="fas fa-tachometer-alt"></i>
+					</div>
+				</div>
+				<div class="data-box-title animated" data-animation-delay="400" data-direction="X"
+					data-transition-time="0.4s" data-magnitude="0px" data-base-margin="10px">
+					Easy
+				</div>
+				<div class="data-box-subtitle animated" data-animation-delay="600" data-direction="X"
+					data-transition-time="0.4s" data-magnitude="0px" data-base-margin="10px">
+					Strong preference for intuitive to use, intuitive UX/UI.
+				</div>
+			</div>
+
+
+		</div>
+		<div class="flex-row about-row" style="justify-content: space-evenly;">
+			<div class="animated about-me" data-direction="X" data-transition-time="0.5s" data-magnitude="-250px"
+				data-base-margin="-100px">
+				<div class="about-me-image">
+
+				</div>
+				<div class="about-me-title">
+					Who am I?
+				</div>
+				<div class="about-me-content">
+					I'm a Full-Stack developer and full time student
+					attending UBC in Vancouver, Canada. I have
+					a serious passion for computers & web design, among other things
+				</div>
+			</div>
+			<div class="skill-bar-holder animated" data-animated-override="true" data-base-margin="-150px"
+				data-type="custom" data-custom-animation="1">
+				<div class="skill-bar">
+					<div class="skill-bar-skill">CSS</div>
+					<div class="skill-bar-bar">
+						<div class="skill-bar-visible" data-skill="95%"></div>
+					</div>
+					<div class="skill-bar-percent">95%</div>
+				</div>
+				<div class="skill-bar">
+					<div class="skill-bar-skill">JavaScript</div>
+					<div class="skill-bar-bar">
+						<div class="skill-bar-visible" data-skill="95%"></div>
+					</div>
+					<div class="skill-bar-percent">95%</div>
+				</div>
+				<div class="skill-bar">
+					<div class="skill-bar-skill">Node JS</div>
+					<div class="skill-bar-bar">
+						<div class="skill-bar-visible" data-skill="90%"></div>
+					</div>
+					<div class="skill-bar-percent">90%</div>
+				</div>
+				<div class="skill-bar">
+					<div class="skill-bar-skill">React</div>
+					<div class="skill-bar-bar">
+						<div class="skill-bar-visible" data-skill="90%"></div>
+					</div>
+					<div class="skill-bar-percent">90%</div>
+				</div>
+				<div class="skill-bar">
+					<div class="skill-bar-skill">React Native</div>
+					<div class="skill-bar-bar">
+						<div class="skill-bar-visible" data-skill="85%"></div>
+					</div>
+					<div class="skill-bar-percent">85%</div>
+				</div>
+
+				<div class="skill-bar">
+					<div class="skill-bar-skill">MongoDB</div>
+					<div class="skill-bar-bar">
+						<div class="skill-bar-visible" data-skill="90%"></div>
+					</div>
+					<div class="skill-bar-percent">90%</div>
+				</div>
+				<div class="skill-bar">
+					<div class="skill-bar-skill">MariaDB/MySQL</div>
+					<div class="skill-bar-bar">
+						<div class="skill-bar-visible" data-skill="80%"></div>
+					</div>
+					<div class="skill-bar-percent">80%</div>
+				</div>
+				<div class="skill-bar">
+					<div class="skill-bar-skill">Dart</div>
+					<div class="skill-bar-bar">
+						<div class="skill-bar-visible" data-skill="70%"></div>
+					</div>
+					<div class="skill-bar-percent">70%</div>
+				</div>
+				<div class="skill-bar">
+					<div class="skill-bar-skill">PHP</div>
+					<div class="skill-bar-bar">
+						<div class="skill-bar-visible" data-skill="60%"></div>
+					</div>
+					<div class="skill-bar-percent">60%</div>
+				</div>
+				<div class="skill-bar">
+					<div class="skill-bar-skill">C++</div>
+					<div class="skill-bar-bar">
+						<div class="skill-bar-visible" data-skill="80%"></div>
+					</div>
+					<div class="skill-bar-percent">80%</div>
+				</div>
+				<div class="skill-bar">
+					<div class="skill-bar-skill">Swift</div>
+					<div class="skill-bar-bar">
+						<div class="skill-bar-visible" data-skill="70%"></div>
+					</div>
+					<div class="skill-bar-percent">70%</div>
+				</div>
+				<div class="skill-bar">
+					<div class="skill-bar-skill">UI Design</div>
+					<div class="skill-bar-bar">
+						<div class="skill-bar-visible" data-skill="60%"></div>
+					</div>
+					<div class="skill-bar-percent">60%</div>
+				</div>
+			</div>
+		</div>
+
+
+
+	</div>
+	<div class="frame frame-3" id="frame-3">
+		<div class="animated frame-title" data-direction="X" data-transition-time="0.4s" data-magnitude="550px"
+			data-base-margin="20px">
+			Projects
+		</div>
+		<div class="animated frame-title-bar" data-animated-override="true" data-animation-delay="400"
+			data-direction="X" data-transition-time="0.4s" data-magnitude="550px" data-base-margin="80px">
+		</div>
+
+		<div class="projects-box">
+			<div class="projects-header" id="projects-header">
+				<div class="project-type" style="color: #eee" onclick="moveProjectBox(0)">All</div>
+				<div class="project-type" onclick="moveProjectBox(1)">NodeJS</div>
+				<div class="project-type" onclick="moveProjectBox(2)">React</div>
+				<div class="project-type" onclick="moveProjectBox(3)">Swift</div>
+				<div class="project-type" onclick="moveProjectBox(4)">C++</div>
+				<div class="selected-project" id="selected-project">
+					<div class="project-type" onclick="moveProjectBox(0)">All</div>
+				</div>
+			</div>
+			<div class="projects-grid" id="project-grid">
+			</div>
+		</div>
+	</div>
+
+	<% if (blogs.length) { %>
+	<div class="frame frame-4" id="frame-4">
+		<div class="animated frame-title" data-direction="X" data-transition-time="0.4s" data-magnitude="-550px"
+			data-base-margin="20px">
+			Blog
+		</div>
+		<div class="animated frame-title-bar" data-animated-override="true" data-animation-delay="400"
+			data-direction="X" data-transition-time="0.4s" data-magnitude="-550px" data-base-margin="80px">
+		</div>
+		<div class="blog-cards">
+			<% blogs.forEach(blog => { %>
+			<a class="blog-card" href="<%=blog.href%>">
+				<div class="blog-card-image"
+					style="width: 310px; height: <%=blog.primary_image.height/blog.primary_image.width*310%>px">
+					<img src="<%=server_info.config.image_host_url%><%=blog.primary_image.formats.medium.url%>"
+						style="width: 310px; height: <%=blog.primary_image.height/blog.primary_image.width*310%>px">
+				</div>
+				<div class="blog-title">
+					<%=blog.title%>
+				</div>
+				<div class="blog-card-date">
+					<%=moment(blog.createdAt).format("MMMM DD, YYYY")%>
+				</div>
+				<div class="blog-card-description">
+					<%=blog.preview%>
+				</div>
+			</a>
+			<% }) %>
+		</div>
+	</div>
+	<% } %>
+
+
+	<div class="frame frame-5" id="frame-5">
+		<svg preserveAspectRatio="none" viewBox="0 0 100 102" height="75" width="100%" version="1.1"
+			xmlns="http://www.w3.org/2000/svg" class="svgcolor-light" style="position: absolute; top: 0">
+			<path d="M0 0 L50 100 L100 0 Z" fill="<%=blogs.length ? 'white' : '#f5f5f5'%>"
+				stroke="<%=blogs.length ? 'white' : '#f5f5f5'%>"></path>
+		</svg>
+		<div class="animated frame-title" data-direction="X" data-transition-time="0.4s" data-magnitude="550px"
+			data-base-margin="20px" style="color: white">
+			Contact
+		</div>
+		<div class="animated frame-title-bar" data-animated-override="true" data-animation-delay="400"
+			data-direction="X" data-transition-time="0.4s" data-magnitude="550px" data-base-margin="80px"
+			style="background-color: white;">
+		</div>
+		<span style="color: #04c2c9; margin-top: 50px;margin-bottom: 50px; font-size: 18px; text-align: center;">Have a
+			question or want to work together?</span>
+		<% if (query.error) { %>
+		<span id="error"
+			style="color: rgb(212, 61, 61); margin-top: 0px; margin-bottom: 50px; font-size: 18px; text-align: center;"><%=query.error%>
+		</span>
+		<% } %>
+		<form action="/" class="contact" method="POST">
+			<input type="text" name="name" placeholder="Name">
+			<input type="email" name="email" placeholder="Email">
+			<textarea name="message" placeholder="Your Message"></textarea>
+			<button type="submit" class="submit">Submit</button>
+		</form>
+	</div>
+	<div class="bottom-bar">
+		<div class="social-icons">
+			<a class="social-icon" href="https://www.linkedin.com/in/aidan-eglin-830805159/" target="_blank">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+					<path
+						d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+				</svg>
+			</a>
+
+			<a class="social-icon" href="https://github.com/aidane1?tab=repositories/" target="_blank">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+					<path
+						d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+				</svg>
+			</a>
+
+
+		</div>
+
+	</div>
+</body>
+
+<script src="/vanta/dist/vanta.globe.min.js"></script>
+<script src="/javascript/main.js"></script>
+
+<script>
+
+</script>
+
+</html>

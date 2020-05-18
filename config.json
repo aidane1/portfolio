@@ -1,0 +1,26 @@
+{
+    "development": {
+        "config_id": "development",
+		"app_name": "Portfolio",
+		"app_base_url": "http://localhost:8686",
+		"api_base_url": "http://localhost:8282",
+		"api_public_url": "http://localhost:8282",
+		"image_host_url": "http://localhost:1337",
+		"app_desc": "Aidan Eglin's Portfolio",
+        "node_port": 8686,
+        "database": "mongodb://127.0.0.1:27017/portfolio",
+        "update_info": false
+    },
+    "production": {
+        "config_id": "production",
+		"app_name": "Portfolio",
+		"app_base_url": "http://159.65.72.108:8282",
+		"api_base_url": "http://localhost:8282",
+		"api_public_url": "http://159.65.72.108:8282",
+		"image_host_url": "http://159.65.72.108:1337",
+		"app_desc": "Aidan Eglin's blog",
+        "node_port": 8686,
+        "database": "mongodb://127.0.0.1:27017/portfolio",
+        "update_info": false
+    }
+}
