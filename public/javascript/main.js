@@ -10,16 +10,22 @@ let closeNavBar = () => {
   nav.classList.remove("nav-bar-extended");
 };
 
-VANTA.GLOBE({
-  el: "#frame-1-background",
-  color: 0x000000,
-  waveHeight: 20,
-  shininess: 50,
-  waveSpeed: 1.5,
-  zoom: 0.75,
-  backgroundColor: "#252934",
-  color: "#777",
-});
+if (window.innerWidth > cutoffWidth) {
+  VANTA.GLOBE({
+    el: "#frame-1-background",
+    color: 0x000000,
+    waveHeight: 20,
+    shininess: 50,
+    waveSpeed: 1.5,
+    zoom: 0.75,
+    backgroundColor: "#252934",
+    color: "#777",
+  });
+} else {
+	let frame = document.getElementById("frame-1-background");
+	frame.style.backgroundImage = "url(/images/canvas.png)";
+	frame.style.backgroundSize = "cover";
+}
 
 let projects = {
   0: [
@@ -226,10 +232,8 @@ let moveProjectBox = (index) => {
       itemBoxes = [...itemBoxes, ...projects[key]];
     }
   } else {
-    itemBoxes = projects[index-1];
+    itemBoxes = projects[index - 1];
   }
-
-
 
   itemBoxes.forEach((project) => {
     let element = createProjectBox(project);
@@ -310,7 +314,6 @@ animatedElements.forEach((element) => {
     window.innerWidth > cutoffWidth ||
     element.getAttribute("data-animated-override") === "true"
   ) {
-    console.log("fuck");
     let magnitude = element.getAttribute("data-magnitude");
     let type = element.getAttribute("data-type") || "None";
     if (type == "custom") {
@@ -336,7 +339,12 @@ animatedElements.forEach((element) => {
       }
     }
   } else {
-    animate(element);
+    // animate(element);
+    element.style.opacity = "1";
+    let customNum = parseInt(element.getAttribute("data-custom-animation"));
+    if (!isNaN(customNum)) {
+      animate(element);
+    }
   }
 });
 
