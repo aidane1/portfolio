@@ -10,7 +10,6 @@ let closeNavBar = () => {
   nav.classList.remove("nav-bar-extended");
 };
 
-
 let frame = document.getElementById("frame-1-background");
 frame.style.backgroundImage = "url(/images/canvas.png)";
 frame.style.backgroundSize = "cover";
@@ -236,11 +235,37 @@ let frames = [1, 2, 3, 4, 5];
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
-    document.querySelector(this.getAttribute("href")).scrollIntoView({
-      behavior: "smooth",
-    });
+    scrollElementIntoView(
+      document.querySelector(this.getAttribute("href")),
+      "smooth"
+    );
+    // document.querySelector(this.getAttribute("href")).scrollIntoView({
+    //   behavior: "smooth",
+    // });
   });
 });
+
+let scrollElementIntoView = (element, behavior) => {
+  let scrollTop = window.pageYOffset || element.scrollTop;
+
+  // Furthermore, if you have for example a header outside the iframe
+  // you need to factor in its dimensions when calculating the position to scroll to
+  //  const headerOutsideIframe = window.parent.document.getElementsByClassName('myHeader')[0].clientHeight
+
+
+  let finalOffset;
+
+  if (element.id == "frame-2") {
+    finalOffset = element.getBoundingClientRect().top + scrollTop;
+  } else {
+    finalOffset = element.getBoundingClientRect().top + scrollTop - 10;
+  }
+
+  window.parent.scrollTo({
+    top: finalOffset,
+    behavior: behavior || "auto",
+  });
+};
 
 let navLinks = new Array(...document.getElementsByClassName("nav-link"));
 
