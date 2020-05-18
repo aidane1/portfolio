@@ -180,9 +180,9 @@ let createProjectBox = (
 							<div class="title-primary">${title}</div>
 							<div class="title-secondary">${subtitle}</div>
 						</div>
-						<div class="grid-overlay-more">
+						<a class="grid-overlay-more" href=${link}>
 							Learn More
-						</div>
+						</a>
 					</div>
 		`;
   return parent;

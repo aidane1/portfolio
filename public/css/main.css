@@ -440,6 +440,7 @@ body {
 }
 
 .grid-overlay-more {
+  text-decoration: none;
   width: 90%;
   text-transform: capitalize;
   padding: 12px 25px;
@@ -810,6 +811,6 @@ body {
     font-size: 14px;
   }
   .grid-item {
-	  width: 100%;
+    width: 100%;
   }
 }
