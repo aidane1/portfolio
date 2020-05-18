@@ -151,6 +151,10 @@ body {
   transition: transform 0.4s ease-out;
 }
 
+.skill-bar-holder-mobile {
+	transform: translateX(0px);
+}
+
 .skill-bar {
   margin-top: 13px;
   width: 100%;
@@ -318,6 +322,10 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.mobile-hex {
+	transform: translateX(-50%) rotateY(0deg);
 }
 
 .hex-content {

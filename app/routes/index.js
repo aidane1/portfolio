@@ -22,9 +22,19 @@ router.get("/", async (req, res) => {
       blogs.slice(0, 4);
     }
 
-    res.render("index", { server_info, moment, blogs, query: req.query });
+    console.log(req.device);
+
+    if (req.device.type.toLowerCase() == "desktop") {
+      res.render("index", { server_info, moment, blogs, query: req.query });
+    } else {
+      res.render("mobile_index", { server_info, moment, blogs, query: req.query });
+    }
   } catch (e) {
-    res.render("index", { server_info, moment, blogs: [], query: req.query });
+    if (req.device.type.toLowerCase() == "desktop") {
+      res.render("index", { server_info, moment, blogs: [], query: req.query });
+    } else {
+      res.render("mobile_index", { server_info, moment, blogs: [], query: req.query });
+    }
   }
 });
 
@@ -56,11 +66,15 @@ router.post("/", async (req, res) => {
       });
       res.redirect("/");
     } else {
-      res.redirect(`/?error=${encodeURIComponent("Error: All fields fequired")}#error`);
+      res.redirect(
+        `/?error=${encodeURIComponent("Error: All fields fequired")}#error`
+      );
     }
   } catch (e) {
     console.log(e);
-    res.redirect(`/?error=${encodeURIComponent("Error: An unknown error occured")}#error`);
+    res.redirect(
+      `/?error=${encodeURIComponent("Error: An unknown error occured")}#error`
+    );
   }
 });
 
