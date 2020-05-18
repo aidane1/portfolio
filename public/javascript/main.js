@@ -22,9 +22,9 @@ if (window.innerWidth > cutoffWidth) {
     color: "#777",
   });
 } else {
-	let frame = document.getElementById("frame-1-background");
-	frame.style.backgroundImage = "url(/images/canvas.png)";
-	frame.style.backgroundSize = "cover";
+  let frame = document.getElementById("frame-1-background");
+  frame.style.backgroundImage = "url(/images/canvas.png)";
+  frame.style.backgroundSize = "cover";
 }
 
 let projects = {
@@ -164,9 +164,13 @@ let projects = {
   ],
 };
 
-let createProjectBox = ({ image, title, subtitle, link }, compact = false) => {
+let createProjectBox = (
+  { image, title, subtitle, link, section },
+  compact = false
+) => {
   let parent = document.createElement("div");
   parent.className = compact ? "grid-item item-compact" : "grid-item";
+  parent.setAttribute("x-section", section.toString());
   parent.innerHTML = `
 					<div class="grid-content"  style="background-image: url('${image}')">
 						
@@ -192,8 +196,12 @@ window.onload = () => {
 
   let itemBoxes = [];
   for (var key in projects) {
-    itemBoxes = [...itemBoxes, ...projects[key]];
+    projects[key].forEach((project) => {
+      project.section = key;
+      itemBoxes.push(project);
+    });
   }
+
   itemBoxes.forEach((project) => {
     grid.appendChild(createProjectBox(project));
   });
@@ -221,24 +229,19 @@ let moveProjectBox = (index) => {
 
   let items = new Array(...document.getElementsByClassName("grid-item"));
 
-  let grid = document.getElementById("project-grid");
-
-  items.forEach((item) => {
-    item.parentNode.removeChild(item);
-  });
-  let itemBoxes = [];
   if (index == 0) {
-    for (var key in projects) {
-      itemBoxes = [...itemBoxes, ...projects[key]];
-    }
+    items.forEach((item) => {
+      item.style.display = "block";
+    });
   } else {
-    itemBoxes = projects[index - 1];
+    items.forEach((item) => {
+      if (parseInt(item.getAttribute("x-section")) === index - 1) {
+        item.style.display = "block";
+      } else {
+        item.style.display = "none";
+      }
+    });
   }
-
-  itemBoxes.forEach((project) => {
-    let element = createProjectBox(project);
-    grid.appendChild(element);
-  });
 };
 
 let frames = [1, 2, 3, 4, 5];
@@ -339,7 +342,7 @@ animatedElements.forEach((element) => {
       }
     }
   } else {
-	animate(element);
+    animate(element);
   }
 });
 
