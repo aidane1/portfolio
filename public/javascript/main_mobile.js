@@ -1,5 +1,7 @@
 const cutoffWidth = 768;
 
+// smoothScroll.polyfill();
+
 let toggleMenu = () => {
   let nav = document.getElementById("nav-bar");
   nav.classList.toggle("nav-bar-extended");

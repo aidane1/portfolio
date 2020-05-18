@@ -25,15 +25,30 @@ router.get("/", async (req, res) => {
     console.log(req.device);
 
     if (req.device.type.toLowerCase() == "desktop") {
-      res.render("index", { server_info, moment, blogs, query: req.query });
+      res.render("mobile_index", {
+        server_info,
+        moment,
+        blogs,
+        query: req.query,
+      });
     } else {
-      res.render("mobile_index", { server_info, moment, blogs, query: req.query });
+      res.render("mobile_index", {
+        server_info,
+        moment,
+        blogs,
+        query: req.query,
+      });
     }
   } catch (e) {
     if (req.device.type.toLowerCase() == "desktop") {
       res.render("index", { server_info, moment, blogs: [], query: req.query });
     } else {
-      res.render("mobile_index", { server_info, moment, blogs: [], query: req.query });
+      res.render("mobile_index", {
+        server_info,
+        moment,
+        blogs: [],
+        query: req.query,
+      });
     }
   }
 });

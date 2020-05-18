@@ -21,7 +21,8 @@
     "express-device": "^0.4.2",
     "helmet": "^3.22.0",
     "moment": "^2.25.3",
-    "nodemailer": "^6.4.6"
+    "nodemailer": "^6.4.6",
+    "smoothscroll-polyfill": "^0.4.4"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
