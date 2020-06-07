@@ -232,7 +232,7 @@ let moveProjectBox = (index) => {
   }
 };
 
-let frames = [1, 2, 3, 4, 5];
+let frames = [1, 2, 6, 3, 4, 5];
 
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
@@ -253,7 +253,6 @@ let scrollElementIntoView = (element, behavior) => {
   // Furthermore, if you have for example a header outside the iframe
   // you need to factor in its dimensions when calculating the position to scroll to
   //  const headerOutsideIframe = window.parent.document.getElementsByClassName('myHeader')[0].clientHeight
-
 
   let finalOffset;
 
@@ -406,9 +405,13 @@ window.onscroll = () => {
       navBar.classList.remove("nav-bar-tacked");
     }
   }
-  let frameBoxes = frames.map((frame) =>
-    document.getElementById(`frame-${frame}`).getBoundingClientRect()
-  );
+  let frameBoxes = frames
+    .map((frame) =>
+      document.getElementById(`frame-${frame}`)
+        ? document.getElementById(`frame-${frame}`).getBoundingClientRect()
+        : false
+    )
+    .filter((x) => x);
 
   let currentBox = frameBoxes.reduce((acc, current, index) => {
     acc = current.y <= 25 ? index : acc;

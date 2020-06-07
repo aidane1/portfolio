@@ -22,8 +22,6 @@ router.get("/", async (req, res) => {
       blogs.slice(0, 4);
     }
 
-    console.log(req.device);
-
     if (req.device.type.toLowerCase() == "desktop") {
       res.render("index", {
         server_info,
