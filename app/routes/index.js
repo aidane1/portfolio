@@ -22,7 +22,7 @@ router.get("/", async (req, res) => {
       blogs.slice(0, 4);
     }
 
-    if (req.device.type.toLowerCase() != "desktop") {
+    if (req.device.type.toLowerCase() == "desktop") {
       res.render("index", {
         server_info,
         moment,
@@ -30,7 +30,6 @@ router.get("/", async (req, res) => {
         query: req.query,
       });
     } else {
-      console.log("tits");
       res.render("mobile_index", {
         server_info,
         moment,
@@ -39,7 +38,7 @@ router.get("/", async (req, res) => {
       });
     }
   } catch (e) {
-    if (req.device.type.toLowerCase() != "desktop") {
+    if (req.device.type.toLowerCase() == "desktop") {
       res.render("index", { server_info, moment, blogs: [], query: req.query });
     } else {
       res.render("mobile_index", {
