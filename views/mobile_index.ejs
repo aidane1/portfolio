@@ -38,9 +38,10 @@
 	</div>
 	<div class="frame frame-2" id="frame-2">
 		<nav class="nav-bar" id="nav-bar">
-			<ul>
+			<ul style="height: <%=blogs.length ? '240px' : '200px' %>">
 				<li><a class="nav-link active" onclick="closeNavBar()" href="#frame-1">Home</a></li>
 				<li><a class="nav-link" onclick="closeNavBar()" href="#frame-2">About</a></li>
+				<li><a class="nav-link" onclick="closeNavBar()" href="#frame-6">Achievements</a></li>
 				<li><a class="nav-link" onclick="closeNavBar()" href="#frame-3">Projects</a></li>
 				<% if (blogs.length) { %>
 				<li><a class="nav-link" onclick="closeNavBar()" href="#frame-4">Blog</a></li>
@@ -242,12 +243,12 @@
 	</div>
 
 	<div class="frame frame-6" id="frame-6">
-		<div class="animated frame-title" data-direction="X" data-transition-time="0.4s" data-magnitude="550px"
-			data-base-margin="20px">
+		<div class="frame-title" data-direction="X" data-transition-time="0.4s" data-magnitude="-550px"
+			data-base-margin="20px" style="margin-top: 70px">
 			Achievements
 		</div>
-		<div class="animated frame-title-bar" data-animation-delay="400" data-direction="X" data-transition-time="0.4s"
-			data-magnitude="550px" data-base-margin="80px">
+		<div class="frame-title-bar" data-animation-delay="400" data-direction="X" data-transition-time="0.4s"
+			data-magnitude="-550px" data-base-margin="80px">
 		</div>
 
 		<div class="experience-boxes">
