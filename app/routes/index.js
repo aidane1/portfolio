@@ -10,6 +10,38 @@ router.get("/", async (req, res) => {
       `${server_info.config.api_base_url}/api/v1/resources`
     );
 
+    // skills
+
+    // CSS
+    // 95%
+    // JavaScript
+    // 95%
+    // Node JS
+    // 90%
+    // React
+    // 90%
+    // React Native
+    // 85%
+    // MongoDB
+    // 90%
+    // MariaDB/MySQL
+    // 80%
+    // Dart
+    // 70%
+    // PHP
+    // 60%
+    // C++
+    // 80%
+    // Swift
+    // 70%
+	// UI Design
+	
+	// blue green deploy
+	// infrastructure as code
+	// bootstrap
+	// tailwind
+	
+
     let blogs = [];
 
     if (data.status == "ok") {
