@@ -117,12 +117,17 @@ let projects = {
     //   subtitle: "React / NodeJS / Express",
     //   link: "",
     // },
-    // {
-    //   image: "code-1.png",
-    //   title: "Apexschools Web Server",
-    //   subtitle: "React / NodeJS / Express",
-    //   link: "",
-    // },
+	// 
+
+
+
+	// 
+    {
+      image: "/images/blog.jpg",
+      title: "Elixir Blog Server",
+      subtitle: "Elixir",
+      link: "https://github.com/aidane1/elixir-blog",
+    },
   ],
   3: [
     {
@@ -141,26 +146,42 @@ let projects = {
       image: "/images/perlinnoise.png",
       title: "Perlin Noise Generator",
       subtitle: "C++ / SFML",
-      link: "",
+      link: "https://github.com/aidane1/Perlin-Noise",
     },
     {
       image: "/images/xml.png",
       title: "XML Parser",
       subtitle: "C++ / SFML",
-      link: "",
+      link: "https://github.com/aidane1/XML-CSS-Parser",
     },
     {
       image: "/images/os.png",
       title: "Barebones OS",
       subtitle: "C++ / C",
-      link: "",
+      link: "https://github.com/aidane1/myOS",
     },
+
+	// 
+	{
+		image: "/images/n-body.png",
+		title: "N-Body Simulator",
+		subtitle: "C++",
+		link: "https://github.com/aidane1/N-body-simulator",
+	},
     {
       image: "/images/mandelbrot.jpg",
       title: "Interactive MandelBrot Set",
       subtitle: "C++ / SFML",
       link: "https://github.com/aidane1/SFML-Mandelbrot-Set",
     },
+
+	// 
+	{
+		image: "/images/racket.png",
+		title: "Racket Interpreter",
+		subtitle: "C++",
+		link: "https://github.com/aidane1/Racket-Interpreter",
+	},
   ],
 };
 
